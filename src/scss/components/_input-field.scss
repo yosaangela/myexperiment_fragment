@@ -1,0 +1,18 @@
+input,
+textarea,
+select {
+    width: 100%;
+    background-color: transparent;
+    border-radius: $border-radius-small;
+    border: 2px solid $color-text-body-primary;
+    outline: none;
+    padding: 1rem;
+
+    &:focus {
+        border: 2px solid $color-secondary;
+    }
+
+    &::placeholder {
+        opacity: 50%;
+    }
+}

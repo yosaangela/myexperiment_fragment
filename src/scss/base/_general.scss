@@ -1,0 +1,26 @@
+// File: _general.scss
+// This file contains custom general styles outside of normalize.css
+
+/*--------------------------------------------------------------
+# General CSS
+--------------------------------------------------------------*/
+html,
+body {
+    background-color: $color-offwhite-background;
+
+    @media screen and (max-width: 1440px) and (min-width: 1024px) {
+        .container {
+            max-width: 1112px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.1rem;
+    }
+}
+
+article {
+    img {
+        max-width: 100%;
+    }
+}

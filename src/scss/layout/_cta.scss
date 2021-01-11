@@ -1,0 +1,35 @@
+#cta {
+    position: relative;
+    @include padding-y-6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .cta__wrapper {
+        position: relative;
+        z-index: 1;
+
+        .cta__content {
+            @include media-breakpoint-down(md) {
+                @include margin(bottom, 2rem);
+            }
+
+            h2 {
+                @include margin(bottom, 1rem);
+                color: $color-offwhite;
+            }
+
+            p {
+                margin: 0;
+                color: $color-offwhite;
+            }
+        }
+
+        .button-primary {
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

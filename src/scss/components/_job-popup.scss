@@ -1,0 +1,34 @@
+#toasts {
+    position: fixed;
+    z-index: 99;
+    margin: 0;
+    bottom: 1rem;
+    right: 1rem;
+    padding-left: 1rem;
+}
+.toast {
+    border: none;
+    border-radius: $border-radius-small;
+    background-color: white;
+
+    .toast-header,
+    .toast-body {
+        font-size: 0.875rem;
+    }
+
+    .toast-header {
+        padding: 0.5rem;
+        background-color: $color-primary;
+        color: $white;
+    }
+
+    .toast-body {
+        padding: 1rem;
+    }
+
+    button {
+        border: none;
+        background: none;
+        color: $white;
+    }
+}

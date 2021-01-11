@@ -1,0 +1,41 @@
+// File: _variables
+// This file stores all variables used on the site
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Lora", serif;
+$font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font-pre: "Courier 10 Pitch", Courier, monospace;
+$font-line-height-body: 1.5;
+$font-line-height-pre: 1.6;
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+$color-primary: #08385e;
+$color-secondary: #ac8a2c;
+$color-text-heading-primary: #303030;
+$color-text-body-primary: #575757;
+$color-offwhite: #fafafa;
+$color-offwhite-background: #eeeeee;
+
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+$transition-header: all 0.333s linear;
+$transition-general: all 250ms ease-in-out;
+
+/*--------------------------------------------------------------
+# Shadow
+--------------------------------------------------------------*/
+$box-shadow-small: 0px 2px 4px 0px rgba(87, 87, 87, 0.4);
+$box-shadow-medium: 0px 5px 10px 0px rgba(87, 87, 87, 0.2);
+$box-shadow-large: 0px 20px 40px 0px rgba(87, 87, 87, 0.15);
+
+/*--------------------------------------------------------------
+# Border
+--------------------------------------------------------------*/
+$border-radius-small: 4px;
+$border-radius-medium: 8px;

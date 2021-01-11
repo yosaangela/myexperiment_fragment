@@ -1,0 +1,120 @@
+// File: _mixins.scss
+// This file contains mixins.
+
+/*--------------------------------------------------------------
+# Padding & Margin
+--------------------------------------------------------------*/
+@mixin padding-y-3rem {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@mixin padding-y-6rem {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@mixin padding-bottom-3rem {
+    padding-bottom: 3rem;
+
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 2rem;
+    }
+}
+
+@mixin padding-top-6rem {
+    padding-top: 6rem;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 5rem;
+    }
+}
+
+@mixin padding-bottom-6rem {
+    padding-bottom: 6rem;
+
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 5rem;
+    }
+}
+
+@mixin padding($position, $size) {
+    @if $position == "top" {
+        padding-top: $size;
+    }
+    @if $position == "right" {
+        padding-right: $size;
+    }
+    @if $position == "bottom" {
+        padding-bottom: $size;
+    }
+    @if $position == "left" {
+        padding-left: $size;
+    }
+    @if $position == "x" {
+        padding-left: $size;
+        padding-right: $size;
+    }
+    @if $position == "y" {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+}
+
+@mixin margin-bottom-6rem {
+    margin-bottom: 6rem;
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 5rem;
+    }
+}
+
+@mixin margin($position, $size) {
+    margin: 0;
+
+    @if $position == "top" {
+        margin-top: $size;
+    }
+    @if $position == "right" {
+        margin-right: $size;
+    }
+    @if $position == "bottom" {
+        margin-bottom: $size;
+    }
+    @if $position == "left" {
+        margin-left: $size;
+    }
+    @if $position == "x" {
+        margin-left: $size;
+        margin-right: $size;
+    }
+    @if $position == "y" {
+        margin-top: $size;
+        margin-bottom: $size;
+    }
+}
+
+@mixin padding-y-half {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@mixin padding-y-xsmall {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

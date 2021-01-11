@@ -1,0 +1,106 @@
+#footer {
+    position: relative;
+    text-align: center;
+    background-color: $color-secondary;
+
+    a {
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .footer__logo {
+        @include margin(bottom, 2rem);
+        img {
+            margin-top: -2rem;
+            width: 175px;
+            height: auto;
+        }
+    }
+
+    .footer__social-medias {
+        @include margin(bottom, 1rem);
+        img {
+            padding: 0 1rem;
+        }
+    }
+
+    hr {
+        @include margin(bottom, 2rem);
+        opacity: 50%;
+    }
+
+    .footer__navigation,
+    .footer__legal {
+        @include margin(bottom, 2rem);
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            @include media-breakpoint-down(sm) {
+                justify-content: flex-start;
+            }
+        }
+
+        .nav-link {
+            color: $color-offwhite;
+            font-family: $font-secondary;
+            font-weight: 600;
+            padding: 0 1rem;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .footer__legal {
+        @include media-breakpoint-down(md) {
+            @include margin(bottom, 1rem);
+        }
+
+        ul {
+            .nav-link {
+                @include media-breakpoint-down(md) {
+                    padding: 0;
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .footer__copyright {
+        // @include margin(bottom, 2rem);
+        color: $color-offwhite;
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: 0.9rem;
+
+        @include media-breakpoint-down(md) {
+            margin: 0;
+            padding-bottom: 2rem;
+
+            text-align: left;
+        }
+
+        .footer__copyright-item {
+            margin: 0;
+
+            a {
+                color: $color-offwhite;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

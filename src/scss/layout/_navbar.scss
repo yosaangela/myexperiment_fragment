@@ -1,0 +1,304 @@
+#masthead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: $transition-header;
+    background-color: $color-offwhite-background;
+
+    @include media-breakpoint-down(md) {
+        display: block;
+        padding: 0;
+    }
+
+    /*--------------------------------------------------------------
+     *GENERAL STYLES
+    --------------------------------------------------------------*/
+    .nav-link-styles {
+        color: $color-text-heading-primary;
+        font-family: $font-primary;
+        font-weight: 600;
+        text-decoration: none;
+        transition: $transition-general;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *CONTAINER WRAPPER
+    --------------------------------------------------------------*/
+    .container {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *LOGO STYLES
+     *MOBILE & DESKTOP EFFECT
+    --------------------------------------------------------------*/
+    .masthead__site-branding {
+        img {
+            transition: $transition-header;
+
+            // position: absolute;
+            // top: 1.25rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            width: 5.625rem;
+            height: auto;
+
+            @include media-breakpoint-down(md) {
+                width: 75px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 65px;
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *MENU NAVIGATION FROM WORDPRESS
+     *MOBILE & DESKTOP EFFECT
+    --------------------------------------------------------------*/
+    .masthead__main-navigation {
+        width: 100%;
+        padding: 2rem 0;
+
+        transition: $transition-header;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+            padding-top: 0;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                &:not(:last-of-type) {
+                    padding-right: 2rem;
+                }
+
+                &:last-of-type {
+                    .nav-link {
+                        position: relative;
+                        color: $color-offwhite;
+                        background-color: $color-primary;
+                        border-radius: $border-radius-small;
+                        padding: 0.5rem 2rem;
+
+                        &:hover {
+                            background: darken($color: $color-primary, $amount: 10);
+                        }
+                    }
+                }
+
+                .nav-link {
+                    @extend .nav-link-styles;
+                }
+            }
+
+            // Link active
+            .current-menu-item {
+                a {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *DROPDOWN MENU
+    --------------------------------------------------------------*/
+    .menu-item-has-children {
+        position: relative;
+
+        .dropdown-toggle {
+            &::after {
+                position: relative;
+                top: -0.2rem;
+                right: -0.4rem;
+                content: " ";
+                border: solid $color-text-heading-primary;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+        }
+
+        .dropdown-menu {
+            display: none !important;
+            background-color: $color-primary;
+            padding: 1rem 2rem;
+            border-radius: $border-radius-small;
+            margin-top: 1rem;
+            position: absolute !important;
+            top: auto !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            min-width: 20vw;
+
+            @include media-breakpoint-down(sm) {
+                padding: 1rem;
+            }
+
+            &.show {
+                display: block !important;
+
+                @include media-breakpoint-down(md) {
+                    position: relative !important;
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+
+                border-bottom: 10px solid $color-primary;
+            }
+
+            .menu-item {
+                margin-bottom: 0.25rem;
+
+                @include media-breakpoint-down(md) {
+                    padding: 0.5rem;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .dropdown-item {
+                    @extend .nav-link-styles;
+                    font-size: 0.8rem;
+                    color: $color-offwhite;
+                    padding: 0;
+
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+
+            .active {
+                a {
+                    color: $color-secondary !important;
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *MENU WRAPPER FOR LOGO AND HAMBUGER
+     *MOBILE EFFECT
+    --------------------------------------------------------------*/
+    .masthead__menu-wrapper {
+        @include media-breakpoint-down(md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *WHEN NAVBAR SCROLLED
+     *MOBILE & DESKTOP EFFECT
+    --------------------------------------------------------------*/
+    &.header-scrolled {
+        box-shadow: $box-shadow-medium;
+
+        .hamburger {
+            .hamburger-inner {
+                background-color: $color-text-heading-primary;
+
+                &::before {
+                    background-color: $color-text-heading-primary;
+                }
+
+                &::after {
+                    background-color: $color-text-heading-primary;
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *HAMBURGER STYLES
+     *SHOW HAMBURGER ONLY ON MOBILE SCREEN
+    --------------------------------------------------------------*/
+    .hamburger {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+            display: block;
+            padding: 15px 0;
+
+            .hamburger-inner {
+                top: 25px;
+                background-color: $color-text-heading-primary;
+
+                &::before {
+                    background-color: $color-text-heading-primary;
+                }
+
+                &::after {
+                    background-color: $color-text-heading-primary;
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+     *WHEN HAMBURGER CLICKED
+     *MOBILE ONLY EFFECT
+    --------------------------------------------------------------*/
+    &.is-active {
+        margin-bottom: 0;
+
+        .masthead__main-navigation {
+            @include media-breakpoint-down(md) {
+                display: block;
+                width: 100%;
+                padding-bottom: 2.75rem;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: flex-start;
+                    padding-top: 1.5rem;
+                    // min-height: 40vh;
+
+                    li {
+                        &:not(:last-of-type) {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

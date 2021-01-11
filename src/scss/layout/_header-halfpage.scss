@@ -1,0 +1,19 @@
+#header-halfpage {
+    position: relative;
+    z-index: 1;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .header-halfpage__content {
+        position: relative;
+        z-index: 3;
+        min-height: inherit;
+
+        h1 {
+            color: $color-offwhite;
+            @include padding-y-6rem;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.button-primary,
+.button-secondary {
+    display: inline-block;
+
+    font-family: $font-primary;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 250ms;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    position: relative;
+    padding: 1rem 3rem;
+    background: $color-primary;
+    border-radius: $border-radius-small;
+    color: $color-offwhite;
+    box-shadow: $box-shadow-small;
+    user-select: none;
+
+    @include media-breakpoint-down(sm) {
+        padding: 1rem 2rem;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color-offwhite;
+        background: darken($color: $color-primary, $amount: 10);
+    }
+}
+
+.button-secondary {
+    position: relative;
+    color: $color-text-heading-primary;
+    font-size: 1.25rem;
+
+    &::after {
+        content: ">";
+        margin-left: 0.25rem;
+        color: $color-secondary;
+    }
+
+    &:hover {
+        color: $color-secondary;
+    }
+}

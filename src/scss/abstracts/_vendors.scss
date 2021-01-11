@@ -1,0 +1,32 @@
+// File: _vendors.scss
+// This file imports styles from other vendors.
+
+/*--------------------------------------------------------------
+# Google Fonts
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+$container-max-widths: (
+    xl: 1440px,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/toasts";
+
+/*--------------------------------------------------------------
+# Hamburger
+--------------------------------------------------------------*/
+$hamburger-layer-width: 30px;
+$hamburger-layer-height: 4px;
+@import "hamburgers";
+
+/*--------------------------------------------------------------
+# Slick
+--------------------------------------------------------------*/
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";

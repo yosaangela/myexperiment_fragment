@@ -1,0 +1,27 @@
+.day-wrapper {
+    display: flex;
+    font-family: $font-primary;
+    font-size: 1.25rem;
+    color: $color-offwhite;
+    overflow-x: hidden;
+
+    @include margin(bottom, 0.5rem);
+
+    &:last-of-type {
+        margin: 0;
+    }
+
+    .dots {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .status {
+        padding-left: 0.75rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-right: 1rem;
+        }
+    }
+}
