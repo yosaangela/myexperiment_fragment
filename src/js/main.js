@@ -80,4 +80,9 @@ import {
 				}
 			}
 		});
+
+	//Button caption Change
+	$(".dropdown-menu a").on("click", function () {
+		$(".dropdown-toggle").html($(this).html());
+	});
 })(jQuery);
