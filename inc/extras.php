@@ -84,13 +84,13 @@ function headlab_menu($location)
  * Registe ajax script function 
  */
 function ajax_search_filter_scripts() {
-	wp_register_script( 'ajax_search_filter', get_stylesheet_directory_uri() . '/js/ajax-filter.js', array('jquery'), false, true ); 
+	wp_register_script( 'ajax_search_filter', get_stylesheet_directory_uri() . '/src/js/ajax-filter.js', array('jquery'), false, true ); 
 	$script_data_array = [
-		'ajaxurl'	=> admin( 'admin-ajax.php' ),
+		'ajaxurl'	=> admin_url( 'admin-ajax.php' ),
 		'security'	=> wp_create_nonce( 'filter_search_posts'),
 	];
 	wp_localize_script(
-		'ajax_search_filter', 'ajax_url', admin_url('admin-ajax.php')
+		'ajax_search_filter', 'book', admin_url('admin-ajax.php')
 	); 
 
 	wp_enqueue_script('ajax_search_filter');

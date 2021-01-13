@@ -161,3 +161,8 @@ require get_template_directory() . '/inc/register-cpt-book.php';
  * Register CPT Notifications
  */
 require get_template_directory() . '/inc/register-cpt-notifications.php';
+
+/**
+ * Register ajax search filter
+ */
+require get_template_directory() . '/inc/ajax-search-filter.php';
